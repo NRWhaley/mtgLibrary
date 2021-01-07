@@ -1,11 +1,14 @@
 import './App.css';
+import React from 'react';
+import collection from './collection.jsx';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <p>
-          Edit <code>src/App.js</code> and save to reload. Hi
+          <
         </p>
         <a
           className="App-link"
