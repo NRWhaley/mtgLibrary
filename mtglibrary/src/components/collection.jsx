@@ -1,7 +1,6 @@
 import React from 'react';
 const mtg = require('mtgsdk');
 
-
 const entryStyle = {
   color: 'black',
   backgroundColor: 'lightgrey',
@@ -19,3 +18,5 @@ function cardEntry(props){
     </div>
   )
 }
+
+export cardEntry;
