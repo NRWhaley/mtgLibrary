@@ -1,26 +1,30 @@
 import './App.css';
 import React from 'react';
-import collection from './collection.jsx';
+import CardList from './components/collection.jsx';
 
 
-function App() {
+class App extends React.Component {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      cards: [{name: '', colors: '', type: ''},{name:'', colors:'', type: ''}]
+    }
+
+   // this.componentDidMount = this.componentDidMount.bind(this)
+
+  }
+
+  render(){
+
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          <
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CardList movies ={this.state.cards}/>
+        </header>
     </div>
-  );
+  )};
+
 }
 
 export default App;

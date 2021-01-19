@@ -1,6 +1,9 @@
 import React from 'react';
 const mtg = require('mtgsdk');
 
+
+
+
 const entryStyle = {
   color: 'black',
   backgroundColor: 'lightgrey',
@@ -9,7 +12,8 @@ const entryStyle = {
   align: 'center'
 }
 
-function cardEntry(props){
+
+function CardEntry(props){
   return (
     <div className="cardEntry" style={entryStyle}>
       <div>{props.name}</div>
@@ -17,6 +21,24 @@ function cardEntry(props){
       <div>{props.type}</div>
     </div>
   )
+};
+
+class CardList extends React.Component {
+  constructor(props){
+    super(props)
+  }
+
+  render(){
+    return(
+      <div>
+        {this.props.list.map((card) => (
+        <CardEntry name={card.name} colors={card.colors} type={card.type}
+        />
+
+        ))}
+      </div>
+    )
+  }
 }
 
-export cardEntry;
+export default CardList
